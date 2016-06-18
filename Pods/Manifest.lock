@@ -1,0 +1,12 @@
+PODS:
+  - GLCalendarView (1.0.3)
+
+DEPENDENCIES:
+  - GLCalendarView (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  GLCalendarView: f3a71aca59f456b81abad9667dc5985c46810996
+
+PODFILE CHECKSUM: 244eaaff7105c1c5f72eb7738c07a9a79ed0898b
+
+COCOAPODS: 1.0.1
