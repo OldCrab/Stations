@@ -24,19 +24,10 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //sorted cities
     var cities = [City]() { willSet(newValue) {
-            self.cities = newValue.sort({
-                if $0.countryTitle == $1.countryTitle {
-                    return $0.cityTitle < $1.cityTitle
-                } else {
-                    return $0.countryTitle < $1.countryTitle
-                }
-            })
+            self.cities = sortCities(newValue)
         }
-        
         didSet {
-            for city in cities {
-                stations += city.stations
-            }
+            fillStations(cities)
         }
     }
     var stations = [Station]()
@@ -101,6 +92,7 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
         if searchController.active && searchController.searchBar.text != "" {
             return nil
         }
+        
         var result = ""
         if let country = cities[section].countryTitle {
             result.appendContentsOf(country)
@@ -123,12 +115,29 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func search(sender: AnyObject) {
         self.presentViewController(searchController, animated: true, completion: nil)
     }
-
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+    
+    func sortCities(cities: [City]) -> [City]{
+        return cities.sort {
+            if $0.countryTitle == $1.countryTitle {
+                return $0.cityTitle < $1.cityTitle
+            } else {
+                return $0.countryTitle < $1.countryTitle
+            }
+        }
     }
     
-    func filterContentForSearchText(searchText: String) {
+    func fillStations(cities: [City]) {
+        for city in cities {
+            stations += city.stations
+        }
+    }
+
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        filterStationsForSearchText(searchController.searchBar.text!, stations: stations)
+        tableView.reloadData()
+    }
+    
+    func filterStationsForSearchText(searchText: String, stations: [Station]) {
         let searchLowerCase = searchText.lowercaseString
         filteredStations = stations.filter { station in
             var result = false
@@ -137,8 +146,8 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
             }
                 return result
         }
-        tableView.reloadData()
     }
+    
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

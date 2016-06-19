@@ -9,10 +9,10 @@
 import Foundation
 
 class Point {
-    var longtitude: Double
-    var latitude: Double
+    var longtitude: NSNumber
+    var latitude: NSNumber
     
-    init?(longtitude: Double?, latitude: Double?) {
+    init?(longtitude: NSNumber?, latitude: NSNumber?) {
         guard let long = longtitude, let lati = latitude else {
             return nil
         }

@@ -13,12 +13,12 @@ class JSONParser {
         
         var result = [String : [City]]()
         
-        guard let response = try? NSJSONSerialization.JSONObjectWithData(json, options: .MutableContainers) as? NSDictionary else {
+        guard let allCities = try? NSJSONSerialization.JSONObjectWithData(json, options: .MutableContainers) as? NSDictionary else {
             return result
         }
         
-        if let uResponse = response {
-            for (key, value) in uResponse {
+        if let uAllCities = allCities {
+            for (key, value) in uAllCities {
                 guard let stringKey  = key as? String, let arrayValue = value as? NSArray else {
                     continue
                 }
@@ -64,7 +64,7 @@ class JSONParser {
     }
     
     func parsePoint(point: NSDictionary?) -> Point? {
-        return Point(longtitude: point?["longitude"] as? Double, latitude: point?["latitude"] as? Double)
+        return Point(longtitude: point?["longitude"] as? NSNumber, latitude: point?["latitude"] as? NSNumber)
     }
     
     func parseStations(stations: NSArray) -> [Station] {
