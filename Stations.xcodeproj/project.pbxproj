@@ -136,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				84137D8A1D14CBA600402FFB /* InAppButton.swift */,
+				849152F51D16350400AF8E78 /* StationTableViewCell.swift */,
 			);
 			name = UIInheritors;
 			sourceTree = "<group>";
@@ -173,22 +174,16 @@
 		844978CC1D1339F100F13E0B /* Stations */ = {
 			isa = PBXGroup;
 			children = (
+				849152F91D16609C00AF8E78 /* ViewControllers */,
 				849152EA1D15BB9600AF8E78 /* Model */,
 				84137D931D14D09600402FFB /* Constants */,
 				84137D8C1D14CBAE00402FFB /* UIInheritors */,
 				844978CD1D1339F100F13E0B /* AppDelegate.swift */,
-				8493B85C1D1386320021F13A /* JourneyTableViewController.swift */,
-				84137D941D14DA2100402FFB /* CalendarViewController.swift */,
 				844978D11D1339F100F13E0B /* Main.storyboard */,
 				844978D41D1339F100F13E0B /* Assets.xcassets */,
 				844978D61D1339F100F13E0B /* LaunchScreen.storyboard */,
 				844978D91D1339F100F13E0B /* Info.plist */,
-				849152DE1D15AEBA00AF8E78 /* StationsViewController.swift */,
-				849152EB1D15CAA100AF8E78 /* StationsFromViewController.swift */,
-				849152ED1D15CAB800AF8E78 /* StationsToViewController.swift */,
 				849152F11D15FDD000AF8E78 /* allStations.json */,
-				849152F51D16350400AF8E78 /* StationTableViewCell.swift */,
-				849152F71D16394A00AF8E78 /* InfoViewController.swift */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -222,6 +217,19 @@
 				849152F31D15FF0500AF8E78 /* JSONParser.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		849152F91D16609C00AF8E78 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8493B85C1D1386320021F13A /* JourneyTableViewController.swift */,
+				84137D941D14DA2100402FFB /* CalendarViewController.swift */,
+				849152DE1D15AEBA00AF8E78 /* StationsViewController.swift */,
+				849152EB1D15CAA100AF8E78 /* StationsFromViewController.swift */,
+				849152ED1D15CAB800AF8E78 /* StationsToViewController.swift */,
+				849152F71D16394A00AF8E78 /* InfoViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E71CB5F0D170794AD0096D70 /* Frameworks */ = {
