@@ -28,8 +28,33 @@ class StationsUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testChooseStation() {
         
+        let app = XCUIApplication()
+        app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.Button).elementBoundByIndex(0).tap()
+        app.tables.childrenMatchingType(.Cell).elementBoundByIndex(1).staticTexts["Stadion Center, Engerthstr. 242"].tap()
+        app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.Button).elementBoundByIndex(0).tap()
     }
     
+    func testChooseDate() {
+        
+        let app = XCUIApplication()
+        let element = app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1)
+        element.childrenMatchingType(.Button).elementBoundByIndex(2).tap()
+        app.scrollViews.otherElements.staticTexts["19"].tap()
+    }
+
+    func testInfo() {
+        
+        let app = XCUIApplication()
+        let button = app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.Button).elementBoundByIndex(0)
+        button.tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery.childrenMatchingType(.Cell).elementBoundByIndex(3).staticTexts["U-BHF ERDBERGSTR."].tap()
+        button.tap()
+        tablesQuery.childrenMatchingType(.Cell).elementBoundByIndex(1).childrenMatchingType(.Button).element.tap()
+        app.buttons["Ок"].tap()
+        app.navigationBars["Откуда"].buttons["Отмена"].tap()
+    }
 }

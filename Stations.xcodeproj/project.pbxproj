@@ -29,7 +29,7 @@
 		849152F41D15FF0500AF8E78 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F31D15FF0500AF8E78 /* JSONParser.swift */; };
 		849152F61D16350400AF8E78 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F51D16350400AF8E78 /* StationTableViewCell.swift */; };
 		849152F81D16394A00AF8E78 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F71D16394A00AF8E78 /* InfoViewController.swift */; };
-		8493B85D1D1386320021F13A /* JourneyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B85C1D1386320021F13A /* JourneyTableViewController.swift */; };
+		8493B85D1D1386320021F13A /* JourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B85C1D1386320021F13A /* JourneyViewController.swift */; };
 		A9E0AA577FCD94FB319D5EBA /* Pods_StationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAD655EF53FC2917D75E923 /* Pods_StationsUITests.framework */; };
 		AB904DFE93471BD8C6C45612 /* Pods_Stations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CF8D07E719819C1661BCE /* Pods_Stations.framework */; };
 /* End PBXBuildFile section */
@@ -80,7 +80,7 @@
 		849152F31D15FF0500AF8E78 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		849152F51D16350400AF8E78 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		849152F71D16394A00AF8E78 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		8493B85C1D1386320021F13A /* JourneyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyTableViewController.swift; sourceTree = "<group>"; };
+		8493B85C1D1386320021F13A /* JourneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyViewController.swift; sourceTree = "<group>"; };
 		934CE6ACF9CF6440CFB614D9 /* Pods-StationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A0892DD847E22F52B5A14D1 /* Pods-StationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB81118BC3E6E9D80A835C5 /* Pods-StationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsUITests/Pods-StationsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 		849152F91D16609C00AF8E78 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8493B85C1D1386320021F13A /* JourneyTableViewController.swift */,
+				8493B85C1D1386320021F13A /* JourneyViewController.swift */,
 				84137D941D14DA2100402FFB /* CalendarViewController.swift */,
 				849152DE1D15AEBA00AF8E78 /* StationsViewController.swift */,
 				849152EB1D15CAA100AF8E78 /* StationsFromViewController.swift */,
@@ -517,7 +517,7 @@
 				849152EE1D15CAB800AF8E78 /* StationsToViewController.swift in Sources */,
 				844978CE1D1339F100F13E0B /* AppDelegate.swift in Sources */,
 				84137D8B1D14CBA600402FFB /* InAppButton.swift in Sources */,
-				8493B85D1D1386320021F13A /* JourneyTableViewController.swift in Sources */,
+				8493B85D1D1386320021F13A /* JourneyViewController.swift in Sources */,
 				849152F61D16350400AF8E78 /* StationTableViewCell.swift in Sources */,
 				849152E71D15B9D700AF8E78 /* Point.swift in Sources */,
 				84137D921D14CF3100402FFB /* ConstantColors.swift in Sources */,

@@ -9,14 +9,15 @@
 import UIKit
 import CVCalendar
 
-class JourneyTableViewController: UITableViewController, CalendarViewDelegate, StationsFromDelegate, StationsToDelegate {
+class JourneyViewController: UIViewController, CalendarViewDelegate, StationsFromDelegate, StationsToDelegate {
     
     let numberOfCells: CGFloat = 3
     let viewCornerRadius: CGFloat = 5
     
-    @IBOutlet weak var departureCell: UITableViewCell!
-    @IBOutlet weak var destinationCell: UITableViewCell!
-    @IBOutlet weak var dateCell: UITableViewCell!
+
+    @IBOutlet weak var departureTitle: UILabel!
+    @IBOutlet weak var destinationTitle: UILabel!
+    @IBOutlet weak var dateTitle: UILabel!
     
     var startDate: CVDate? = nil
     var departure: Station?
@@ -30,22 +31,14 @@ class JourneyTableViewController: UITableViewController, CalendarViewDelegate, S
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        self.view.layer.cornerRadius = viewCornerRadius
-        fixTableViewInsets()
     }
     
     override func viewWillAppear(animated: Bool) {
-        dateCell.textLabel?.text = startDate != nil ? startDate!.commonDescription : "Дата путешествия"
-        departureCell.textLabel?.text = departure != nil ? departure?.getDescription() : "Откуда"
-        destinationCell.textLabel?.text = destination != nil ? destination!.getDescription() : "Куда"
+        departureTitle.text = departure != nil ? departure?.getDescription() : "Откуда"
+        dateTitle.text = startDate != nil ? startDate!.commonDescription : "Дата путешествия"
+        destinationTitle.text = destination != nil ? destination!.getDescription() : "Куда"
     }
     
-    private func fixTableViewInsets() {
-        // Function for right rendering of content
-        let contentInsets = UIEdgeInsetsZero
-        tableView.contentInset = contentInsets
-        tableView.scrollIndicatorInsets = contentInsets
-    }
     
     private func parseTestData() {
         let parser = JSONParser()
@@ -54,9 +47,6 @@ class JourneyTableViewController: UITableViewController, CalendarViewDelegate, S
             if let jsonData = try? NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe) {
                 allStations = parser.parseAllCities(jsonData)
             }
-//            if let jsonData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil) {
-//                parser.parseAllCities(jsonData)
-//            }
         }
     }
     
@@ -65,14 +55,6 @@ class JourneyTableViewController: UITableViewController, CalendarViewDelegate, S
         // Dispose of any resources that can be recreated.
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        print(indexPath.row)
-    }
-    // MARK: - Table view delegate
-  
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return self.tableView.frame.height / numberOfCells
-    }
     
     // MARK: - Calendar view delegate
     
@@ -110,6 +92,8 @@ class JourneyTableViewController: UITableViewController, CalendarViewDelegate, S
             }
         }
     }
+    
+    
     
     @IBAction func unwindToJourneyVC(unwindSegue: UIStoryboardSegue) {
         
