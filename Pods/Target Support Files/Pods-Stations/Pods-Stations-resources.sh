@@ -79,24 +79,6 @@ EOM
       ;;
   esac
 }
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-magnify-glass.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-magnify-glass@2x.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-shadow.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-shadow@2x.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-shadow@3x.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/GLCalendarDayCell/GLCalendarDayCell.xib"
-  install_resource "GLCalendarView/GLCalendarView/Sources/GLCalendarView.xib"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-magnify-glass.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-magnify-glass@2x.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-shadow.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-shadow@2x.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/Images/gl-calendar-shadow@3x.png"
-  install_resource "GLCalendarView/GLCalendarView/Sources/GLCalendarDayCell/GLCalendarDayCell.xib"
-  install_resource "GLCalendarView/GLCalendarView/Sources/GLCalendarView.xib"
-fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

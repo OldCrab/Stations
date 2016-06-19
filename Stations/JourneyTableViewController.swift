@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CVCalendar
 
-class JourneyTableViewController: UITableViewController {
+class JourneyTableViewController: UITableViewController, CalendarViewDelegate, StationsFromDelegate, StationsToDelegate {
     
     let numberOfCells: CGFloat = 3
     let viewCornerRadius: CGFloat = 5
@@ -17,8 +18,14 @@ class JourneyTableViewController: UITableViewController {
     @IBOutlet weak var destinationCell: UITableViewCell!
     @IBOutlet weak var dateCell: UITableViewCell!
     
+    var startDate: CVDate? = nil
+    var departure: Station?
+    var destination: Station?
+    var allStations = [String : [City]]()
+    
+    
     override func viewDidLoad() {
-        departureCell.textLabel?.text = "Sex"
+        parseTestData()
     }
     
     override func viewWillLayoutSubviews() {
@@ -27,11 +34,30 @@ class JourneyTableViewController: UITableViewController {
         fixTableViewInsets()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        dateCell.textLabel?.text = startDate != nil ? startDate!.commonDescription : "Дата путешествия"
+        departureCell.textLabel?.text = departure != nil ? departure?.getDescription() : "Откуда"
+        destinationCell.textLabel?.text = destination != nil ? destination!.getDescription() : "Куда"
+    }
+    
     private func fixTableViewInsets() {
         // Function for right rendering of content
         let contentInsets = UIEdgeInsetsZero
         tableView.contentInset = contentInsets
         tableView.scrollIndicatorInsets = contentInsets
+    }
+    
+    private func parseTestData() {
+        let parser = JSONParser()
+
+        if let path = NSBundle.mainBundle().pathForResource("allStations", ofType: "json") {
+            if let jsonData = try? NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe) {
+                allStations = parser.parseAllCities(jsonData)
+            }
+//            if let jsonData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil) {
+//                parser.parseAllCities(jsonData)
+//            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,19 +73,47 @@ class JourneyTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.tableView.frame.height / numberOfCells
     }
-
-    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        dispatch_async(dispatch_get_main_queue(), {
-                print(indexPath)
-            });
-//        NSOperationQueue.mainQueue().addOperationWithBlock {
-//            dispatch_async(dispatch_get_main_queue(), {
-//            })
-//        }
-        return indexPath
-
+    
+    // MARK: - Calendar view delegate
+    
+    func chooseDate(date: CVDate) {
+        startDate = date
     }
     
+    // MARK: - StationsTo VC delegate
+    func chooseStationTo(station: Station) {
+        self.destination = station
+    }
+    
+    // MARK: - StationsFrom VC delegate
+    func chooseStationFrom(station: Station) {
+        self.departure = station
+    }
+
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "FromJourneyToCalendar" {
+            let destination = segue.destinationViewController as! CalendarViewController
+            destination.delegate = self
+        } else if segue.identifier == "FromCities" {
+            let destination = segue.destinationViewController as! StationsFromViewController
+            if allStations["citiesFrom"] != nil {
+                destination.cities = allStations["citiesFrom"]!
+                destination.delegate = self
+            }
+        } else if segue.identifier == "ToCities" {
+            let destination = segue.destinationViewController as! StationsToViewController
+            if allStations["citiesTo"] != nil {
+                destination.cities = allStations["citiesTo"]!
+                destination.delegate = self
+            }
+        }
+    }
+    
+    @IBAction func unwindToJourneyVC(unwindSegue: UIStoryboardSegue) {
+        
+    }
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
@@ -76,7 +130,6 @@ class JourneyTableViewController: UITableViewController {
     */
 
     /*
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6436392DF436AD90636584A2 /* libPods-StationsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C163EAAEDEB59670B86D08F3 /* libPods-StationsUITests.a */; };
+		088D4DCC3E99BF97530655D1 /* Pods_StationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6AD935E369F117D1915CFEC /* Pods_StationsTests.framework */; };
 		84137D8B1D14CBA600402FFB /* InAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84137D8A1D14CBA600402FFB /* InAppButton.swift */; };
 		84137D921D14CF3100402FFB /* ConstantColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84137D911D14CF3100402FFB /* ConstantColors.swift */; };
 		84137D951D14DA2100402FFB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84137D941D14DA2100402FFB /* CalendarViewController.swift */; };
@@ -17,9 +17,21 @@
 		844978D81D1339F100F13E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844978D61D1339F100F13E0B /* LaunchScreen.storyboard */; };
 		844978E31D1339F100F13E0B /* StationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844978E21D1339F100F13E0B /* StationsTests.swift */; };
 		844978EE1D1339F100F13E0B /* StationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844978ED1D1339F100F13E0B /* StationsUITests.swift */; };
+		849152DF1D15AEBA00AF8E78 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152DE1D15AEBA00AF8E78 /* StationsViewController.swift */; };
+		849152E31D15B78E00AF8E78 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152E21D15B78E00AF8E78 /* Station.swift */; };
+		849152E51D15B90100AF8E78 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152E41D15B90100AF8E78 /* Place.swift */; };
+		849152E71D15B9D700AF8E78 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152E61D15B9D700AF8E78 /* Point.swift */; };
+		849152E91D15BB6800AF8E78 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152E81D15BB6800AF8E78 /* City.swift */; };
+		849152EC1D15CAA100AF8E78 /* StationsFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152EB1D15CAA100AF8E78 /* StationsFromViewController.swift */; };
+		849152EE1D15CAB800AF8E78 /* StationsToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152ED1D15CAB800AF8E78 /* StationsToViewController.swift */; };
+		849152F01D15FDC200AF8E78 /* allStations.json in Resources */ = {isa = PBXBuildFile; fileRef = 849152EF1D15FDC200AF8E78 /* allStations.json */; };
+		849152F21D15FDD000AF8E78 /* allStations.json in Resources */ = {isa = PBXBuildFile; fileRef = 849152F11D15FDD000AF8E78 /* allStations.json */; };
+		849152F41D15FF0500AF8E78 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F31D15FF0500AF8E78 /* JSONParser.swift */; };
+		849152F61D16350400AF8E78 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F51D16350400AF8E78 /* StationTableViewCell.swift */; };
+		849152F81D16394A00AF8E78 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F71D16394A00AF8E78 /* InfoViewController.swift */; };
 		8493B85D1D1386320021F13A /* JourneyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B85C1D1386320021F13A /* JourneyTableViewController.swift */; };
-		9C52469808388AED445D278C /* libPods-Stations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A8ACAB810E3E76A764E603 /* libPods-Stations.a */; };
-		CA7BB2C166489AE306DFF59F /* libPods-StationsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F395B40637C6AF60EA7F9FD /* libPods-StationsTests.a */; };
+		A9E0AA577FCD94FB319D5EBA /* Pods_StationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAD655EF53FC2917D75E923 /* Pods_StationsUITests.framework */; };
+		AB904DFE93471BD8C6C45612 /* Pods_Stations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CF8D07E719819C1661BCE /* Pods_Stations.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F395B40637C6AF60EA7F9FD /* libPods-StationsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StationsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39524C2460DA9533DE29398E /* Pods-Stations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stations/Pods-Stations.release.xcconfig"; sourceTree = "<group>"; };
 		84137D8A1D14CBA600402FFB /* InAppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppButton.swift; sourceTree = "<group>"; };
 		84137D911D14CF3100402FFB /* ConstantColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantColors.swift; sourceTree = "<group>"; };
@@ -57,13 +68,26 @@
 		844978E91D1339F100F13E0B /* StationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844978ED1D1339F100F13E0B /* StationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsUITests.swift; sourceTree = "<group>"; };
 		844978EF1D1339F100F13E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849152DE1D15AEBA00AF8E78 /* StationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
+		849152E21D15B78E00AF8E78 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		849152E41D15B90100AF8E78 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		849152E61D15B9D700AF8E78 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		849152E81D15BB6800AF8E78 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		849152EB1D15CAA100AF8E78 /* StationsFromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsFromViewController.swift; sourceTree = "<group>"; };
+		849152ED1D15CAB800AF8E78 /* StationsToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsToViewController.swift; sourceTree = "<group>"; };
+		849152EF1D15FDC200AF8E78 /* allStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = allStations.json; path = StationsTests/allStations.json; sourceTree = SOURCE_ROOT; };
+		849152F11D15FDD000AF8E78 /* allStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allStations.json; sourceTree = "<group>"; };
+		849152F31D15FF0500AF8E78 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		849152F51D16350400AF8E78 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
+		849152F71D16394A00AF8E78 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8493B85C1D1386320021F13A /* JourneyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyTableViewController.swift; sourceTree = "<group>"; };
 		934CE6ACF9CF6440CFB614D9 /* Pods-StationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A0892DD847E22F52B5A14D1 /* Pods-StationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A0A8ACAB810E3E76A764E603 /* libPods-Stations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Stations.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB81118BC3E6E9D80A835C5 /* Pods-StationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsUITests/Pods-StationsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C163EAAEDEB59670B86D08F3 /* libPods-StationsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StationsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6AD935E369F117D1915CFEC /* Pods_StationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAD655EF53FC2917D75E923 /* Pods_StationsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StationsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31010E8303A0C662FD86EF4 /* Pods-StationsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationsUITests/Pods-StationsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD0CF8D07E719819C1661BCE /* Pods_Stations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE52B1F0AD65C77F1DB51D94 /* Pods-Stations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stations/Pods-Stations.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C52469808388AED445D278C /* libPods-Stations.a in Frameworks */,
+				AB904DFE93471BD8C6C45612 /* Pods_Stations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA7BB2C166489AE306DFF59F /* libPods-StationsTests.a in Frameworks */,
+				088D4DCC3E99BF97530655D1 /* Pods_StationsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6436392DF436AD90636584A2 /* libPods-StationsUITests.a in Frameworks */,
+				A9E0AA577FCD94FB319D5EBA /* Pods_StationsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +173,7 @@
 		844978CC1D1339F100F13E0B /* Stations */ = {
 			isa = PBXGroup;
 			children = (
+				849152EA1D15BB9600AF8E78 /* Model */,
 				84137D931D14D09600402FFB /* Constants */,
 				84137D8C1D14CBAE00402FFB /* UIInheritors */,
 				844978CD1D1339F100F13E0B /* AppDelegate.swift */,
@@ -158,6 +183,12 @@
 				844978D41D1339F100F13E0B /* Assets.xcassets */,
 				844978D61D1339F100F13E0B /* LaunchScreen.storyboard */,
 				844978D91D1339F100F13E0B /* Info.plist */,
+				849152DE1D15AEBA00AF8E78 /* StationsViewController.swift */,
+				849152EB1D15CAA100AF8E78 /* StationsFromViewController.swift */,
+				849152ED1D15CAB800AF8E78 /* StationsToViewController.swift */,
+				849152F11D15FDD000AF8E78 /* allStations.json */,
+				849152F51D16350400AF8E78 /* StationTableViewCell.swift */,
+				849152F71D16394A00AF8E78 /* InfoViewController.swift */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -165,6 +196,7 @@
 		844978E11D1339F100F13E0B /* StationsTests */ = {
 			isa = PBXGroup;
 			children = (
+				849152EF1D15FDC200AF8E78 /* allStations.json */,
 				844978E21D1339F100F13E0B /* StationsTests.swift */,
 				844978E41D1339F100F13E0B /* Info.plist */,
 			);
@@ -180,12 +212,24 @@
 			path = StationsUITests;
 			sourceTree = "<group>";
 		};
+		849152EA1D15BB9600AF8E78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				849152E61D15B9D700AF8E78 /* Point.swift */,
+				849152E41D15B90100AF8E78 /* Place.swift */,
+				849152E81D15BB6800AF8E78 /* City.swift */,
+				849152E21D15B78E00AF8E78 /* Station.swift */,
+				849152F31D15FF0500AF8E78 /* JSONParser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E71CB5F0D170794AD0096D70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A0A8ACAB810E3E76A764E603 /* libPods-Stations.a */,
-				1F395B40637C6AF60EA7F9FD /* libPods-StationsTests.a */,
-				C163EAAEDEB59670B86D08F3 /* libPods-StationsUITests.a */,
+				FD0CF8D07E719819C1661BCE /* Pods_Stations.framework */,
+				C6AD935E369F117D1915CFEC /* Pods_StationsTests.framework */,
+				CCAD655EF53FC2917D75E923 /* Pods_StationsUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,6 +349,7 @@
 			files = (
 				844978D81D1339F100F13E0B /* LaunchScreen.storyboard in Resources */,
 				844978D51D1339F100F13E0B /* Assets.xcassets in Resources */,
+				849152F21D15FDD000AF8E78 /* allStations.json in Resources */,
 				844978D31D1339F100F13E0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849152F01D15FDC200AF8E78 /* allStations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,11 +499,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849152E31D15B78E00AF8E78 /* Station.swift in Sources */,
+				849152EC1D15CAA100AF8E78 /* StationsFromViewController.swift in Sources */,
+				849152E91D15BB6800AF8E78 /* City.swift in Sources */,
 				84137D951D14DA2100402FFB /* CalendarViewController.swift in Sources */,
+				849152F81D16394A00AF8E78 /* InfoViewController.swift in Sources */,
+				849152F41D15FF0500AF8E78 /* JSONParser.swift in Sources */,
+				849152DF1D15AEBA00AF8E78 /* StationsViewController.swift in Sources */,
+				849152EE1D15CAB800AF8E78 /* StationsToViewController.swift in Sources */,
 				844978CE1D1339F100F13E0B /* AppDelegate.swift in Sources */,
 				84137D8B1D14CBA600402FFB /* InAppButton.swift in Sources */,
 				8493B85D1D1386320021F13A /* JourneyTableViewController.swift in Sources */,
+				849152F61D16350400AF8E78 /* StationTableViewCell.swift in Sources */,
+				849152E71D15B9D700AF8E78 /* Point.swift in Sources */,
 				84137D921D14CF3100402FFB /* ConstantColors.swift in Sources */,
+				849152E51D15B90100AF8E78 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,10 +661,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Stations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.OM.Stations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -620,10 +678,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Stations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.OM.Stations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
