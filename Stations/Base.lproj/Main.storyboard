@@ -190,8 +190,6 @@
         <!--Откуда-->
         <scene sceneID="87h-ce-FCH">
             <objects>
-                <exit id="WzK-2B-7nR" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h2A-5X-j9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="yMO-qG-kUB" customClass="StationsFromViewController" customModule="Stations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XWT-T3-szN"/>
@@ -273,6 +271,8 @@
                         <segue destination="oPC-Gl-W8D" kind="presentation" identifier="GetInfo" id="YHe-fw-zsZ"/>
                     </connections>
                 </viewController>
+                <exit id="WzK-2B-7nR" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2A-5X-j9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2432" y="-768"/>
         </scene>
@@ -430,17 +430,17 @@
                                     <constraint firstItem="iUB-4m-1Rp" firstAttribute="centerY" secondItem="M1q-RE-e7C" secondAttribute="centerY" id="x87-CG-wdg"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzO-i7-F7M" customClass="CVCalendarView" customModule="CVCalendar">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XzO-i7-F7M" customClass="CVCalendarView" customModule="CVCalendar">
                                 <rect key="frame" x="0.0" y="91" width="600" height="399"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DA-4X-bB7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DA-4X-bB7">
                                 <rect key="frame" x="275" y="28" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwc-Q2-68Z" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iwc-Q2-68Z" customClass="CVCalendarMenuView" customModule="CVCalendar">
                                 <rect key="frame" x="0.0" y="49" width="600" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -477,8 +477,6 @@
         <!--Куда-->
         <scene sceneID="Oeg-ER-Bgo">
             <objects>
-                <exit id="Zy7-cb-F1M" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iez-hw-WHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="xSB-bD-Edl" customClass="StationsToViewController" customModule="Stations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fR0-d7-TZM"/>
@@ -560,6 +558,8 @@
                         <segue destination="oPC-Gl-W8D" kind="presentation" identifier="GetInfo" id="60c-VZ-iiU"/>
                     </connections>
                 </viewController>
+                <exit id="Zy7-cb-F1M" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iez-hw-WHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2425" y="19"/>
         </scene>
