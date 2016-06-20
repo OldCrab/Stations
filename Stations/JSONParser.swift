@@ -71,8 +71,8 @@ class JSONParser {
         var result = [Station]()
         
         for station in stations {
-            if station as? NSDictionary != nil {
-                result.append(parseStation(station as! NSDictionary))
+            if let dict = station as? NSDictionary {
+                result.append(parseStation(dict))
             }
         }
         

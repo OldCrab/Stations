@@ -19,7 +19,7 @@ class JourneyViewController: UIViewController, CalendarViewDelegate, StationsFro
     @IBOutlet weak var destinationTitle: UILabel!
     @IBOutlet weak var dateTitle: UILabel!
     
-    var startDate: CVDate? = nil
+    var startDate: CVDate?
     var departure: Station?
     var destination: Station?
     var allStations = [String : [City]]()
@@ -75,6 +75,7 @@ class JourneyViewController: UIViewController, CalendarViewDelegate, StationsFro
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //Delegation of the functions that next VC must do
         if segue.identifier == "FromJourneyToCalendar" {
             let destination = segue.destinationViewController as! CalendarViewController
             destination.delegate = self

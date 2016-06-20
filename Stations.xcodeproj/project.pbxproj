@@ -31,6 +31,9 @@
 		849152F61D16350400AF8E78 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F51D16350400AF8E78 /* StationTableViewCell.swift */; };
 		849152F81D16394A00AF8E78 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849152F71D16394A00AF8E78 /* InfoViewController.swift */; };
 		8493B85D1D1386320021F13A /* JourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B85C1D1386320021F13A /* JourneyViewController.swift */; };
+		84C83E6F1D176A2A00E8DAB5 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C83E6E1D176A2A00E8DAB5 /* PointTests.swift */; };
+		84C83E711D177D7600E8DAB5 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C83E701D177D7600E8DAB5 /* AppInfoViewController.swift */; };
+		84C83E731D17876100E8DAB5 /* AppInfoVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C83E721D17876100E8DAB5 /* AppInfoVCTests.swift */; };
 		A9E0AA577FCD94FB319D5EBA /* Pods_StationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAD655EF53FC2917D75E923 /* Pods_StationsUITests.framework */; };
 		AB904DFE93471BD8C6C45612 /* Pods_Stations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CF8D07E719819C1661BCE /* Pods_Stations.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +86,9 @@
 		849152F51D16350400AF8E78 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		849152F71D16394A00AF8E78 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8493B85C1D1386320021F13A /* JourneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyViewController.swift; sourceTree = "<group>"; };
+		84C83E6E1D176A2A00E8DAB5 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
+		84C83E701D177D7600E8DAB5 /* AppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		84C83E721D17876100E8DAB5 /* AppInfoVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoVCTests.swift; sourceTree = "<group>"; };
 		934CE6ACF9CF6440CFB614D9 /* Pods-StationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A0892DD847E22F52B5A14D1 /* Pods-StationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB81118BC3E6E9D80A835C5 /* Pods-StationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsUITests/Pods-StationsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +203,8 @@
 				844978E21D1339F100F13E0B /* StationsTests.swift */,
 				843CECB51D175672002CDFD5 /* JSONParserTests.swift */,
 				844978E41D1339F100F13E0B /* Info.plist */,
+				84C83E6E1D176A2A00E8DAB5 /* PointTests.swift */,
+				84C83E721D17876100E8DAB5 /* AppInfoVCTests.swift */,
 			);
 			path = StationsTests;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				849152EB1D15CAA100AF8E78 /* StationsFromViewController.swift */,
 				849152ED1D15CAB800AF8E78 /* StationsToViewController.swift */,
 				849152F71D16394A00AF8E78 /* InfoViewController.swift */,
+				84C83E701D177D7600E8DAB5 /* AppInfoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -512,6 +521,7 @@
 			files = (
 				849152E31D15B78E00AF8E78 /* Station.swift in Sources */,
 				849152EC1D15CAA100AF8E78 /* StationsFromViewController.swift in Sources */,
+				84C83E711D177D7600E8DAB5 /* AppInfoViewController.swift in Sources */,
 				849152E91D15BB6800AF8E78 /* City.swift in Sources */,
 				84137D951D14DA2100402FFB /* CalendarViewController.swift in Sources */,
 				849152F81D16394A00AF8E78 /* InfoViewController.swift in Sources */,
@@ -532,6 +542,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C83E731D17876100E8DAB5 /* AppInfoVCTests.swift in Sources */,
+				84C83E6F1D176A2A00E8DAB5 /* PointTests.swift in Sources */,
 				843CECB61D175672002CDFD5 /* JSONParserTests.swift in Sources */,
 				844978E31D1339F100F13E0B /* StationsTests.swift in Sources */,
 			);
