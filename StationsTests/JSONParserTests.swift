@@ -256,6 +256,7 @@ class JSONParserTests: XCTestCase {
         if let path = NSBundle.mainBundle().pathForResource("allStations", ofType: "json") {
             if let jsonData = try? NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe) {
                 let result = parser.parseAllCities(jsonData)
+
                 XCTAssertNotNil(result["citiesTo"])
                 XCTAssertNotNil(result["citiesFrom"])
                 XCTAssertEqual(2681, result["citiesTo"]?.count)

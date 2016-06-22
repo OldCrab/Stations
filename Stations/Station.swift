@@ -39,4 +39,11 @@ class Station: Place {
         result += self.stationTitle != nil ? "\n\(self.stationTitle!)" : ""
         return result
     }
+    
+    func getReadableLocation() -> String {
+        var result = self.countryTitle != nil ? "\(self.countryTitle!)" : ""
+        result += self.regionTitle != nil && self.regionTitle != "" ? ", \(self.regionTitle!)" : ""
+        result += self.cityTitle != nil ? ", \(self.cityTitle!)" : ""
+        return result
+    }
 }

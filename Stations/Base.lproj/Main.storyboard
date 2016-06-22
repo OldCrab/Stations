@@ -232,7 +232,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADg-Mi-7Bh">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADg-Mi-7Bh" customClass="StationButton" customModule="Stations" customModuleProvider="target">
                                                     <rect key="frame" x="557" y="0.0" width="43" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="ADg-Mi-7Bh" secondAttribute="height" multiplier="1:1" id="ZGa-5G-vmi"/>
@@ -354,6 +354,9 @@
                             <constraint firstItem="PPR-2k-iv0" firstAttribute="top" secondItem="nNi-jc-B1w" secondAttribute="bottom" id="zzE-o4-RWf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="nNi-jc-B1w" id="fRj-gV-AuR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rj-qN-QIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,7 +522,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yer-al-cgj">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yer-al-cgj" customClass="StationButton" customModule="Stations" customModuleProvider="target">
                                                     <rect key="frame" x="557" y="0.0" width="43" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="yer-al-cgj" secondAttribute="height" multiplier="1:1" id="7xt-T3-AmC"/>

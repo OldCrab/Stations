@@ -34,6 +34,7 @@
 		84C83E6F1D176A2A00E8DAB5 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C83E6E1D176A2A00E8DAB5 /* PointTests.swift */; };
 		84C83E711D177D7600E8DAB5 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C83E701D177D7600E8DAB5 /* AppInfoViewController.swift */; };
 		84C83E731D17876100E8DAB5 /* AppInfoVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C83E721D17876100E8DAB5 /* AppInfoVCTests.swift */; };
+		84C83E751D1A347000E8DAB5 /* StationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C83E741D1A347000E8DAB5 /* StationButton.swift */; };
 		A9E0AA577FCD94FB319D5EBA /* Pods_StationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAD655EF53FC2917D75E923 /* Pods_StationsUITests.framework */; };
 		AB904DFE93471BD8C6C45612 /* Pods_Stations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CF8D07E719819C1661BCE /* Pods_Stations.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		84C83E6E1D176A2A00E8DAB5 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
 		84C83E701D177D7600E8DAB5 /* AppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		84C83E721D17876100E8DAB5 /* AppInfoVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoVCTests.swift; sourceTree = "<group>"; };
+		84C83E741D1A347000E8DAB5 /* StationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationButton.swift; sourceTree = "<group>"; };
 		934CE6ACF9CF6440CFB614D9 /* Pods-StationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A0892DD847E22F52B5A14D1 /* Pods-StationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationsTests/Pods-StationsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB81118BC3E6E9D80A835C5 /* Pods-StationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationsUITests/Pods-StationsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				84137D8A1D14CBA600402FFB /* InAppButton.swift */,
 				849152F51D16350400AF8E78 /* StationTableViewCell.swift */,
+				84C83E741D1A347000E8DAB5 /* StationButton.swift */,
 			);
 			name = UIInheritors;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				8493B85D1D1386320021F13A /* JourneyViewController.swift in Sources */,
 				849152F61D16350400AF8E78 /* StationTableViewCell.swift in Sources */,
 				849152E71D15B9D700AF8E78 /* Point.swift in Sources */,
+				84C83E751D1A347000E8DAB5 /* StationButton.swift in Sources */,
 				84137D921D14CF3100402FFB /* ConstantColors.swift in Sources */,
 				849152E51D15B90100AF8E78 /* Place.swift in Sources */,
 			);

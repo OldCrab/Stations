@@ -11,7 +11,7 @@ import UIKit
 class StationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var infoButton: StationButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

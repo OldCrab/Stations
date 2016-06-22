@@ -22,10 +22,24 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
         return controller
     }()
     
+    var isSearching: Bool {
+        get {
+            return searchController.active && searchController.searchBar.text != ""
+        }
+    }
+//    var currentStations: [Station] {
+//        get {
+//            return searchController.active && searchController.searchBar.text != "" ? filteredStations : stations
+//        }
+//    }
+    
+    
     //sorted cities
-    var cities = [City]() { willSet(newValue) {
+    var cities = [City]() {
+        willSet(newValue) {
             self.cities = sortCities(newValue)
         }
+        
         didSet {
             fillStations(cities)
         }
@@ -61,27 +75,29 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if searchController.active && searchController.searchBar.text != "" {
+        if isSearching {
             return 1
         }
         return cities.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("StationCell") as! StationTableViewCell
-        cell.infoButton.tag = indexPath.row
-
-        if searchController.active && searchController.searchBar.text != "" {
+        cell.infoButton.cityNumber = indexPath.section
+        cell.infoButton.stationNumber = indexPath.row
+        
+        if isSearching {
             cell.name.text = filteredStations[indexPath.row].stationTitle
         } else {
-            cell.name.text = stations[indexPath.row].stationTitle
+            cell.name.text = cities[indexPath.section].stations[indexPath.row].stationTitle
         }
+        
         return cell
-
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchController.active && searchController.searchBar.text != "" {
+        if isSearching {
             return filteredStations.count
         }
         return cities[section].stations.count
@@ -89,7 +105,7 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        if searchController.active && searchController.searchBar.text != "" {
+        if isSearching {
             return nil
         }
         
@@ -108,8 +124,8 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
         return result
     }
     
-    @IBAction func getInfo(sender: UIButton) {
-        performSegueWithIdentifier("GetInfo", sender: stations[sender.tag])
+    @IBAction func getInfo(sender: StationButton) {
+        performSegueWithIdentifier("GetInfo", sender: isSearching ? filteredStations[sender.stationNumber] : cities[sender.cityNumber].stations[sender.stationNumber])
     }
     
     @IBAction func search(sender: AnyObject) {

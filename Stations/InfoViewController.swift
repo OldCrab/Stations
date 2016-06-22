@@ -10,20 +10,28 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var infoLabel: UILabel!
     var station: Station!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateInfo(infoLabel, station: station)
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func updateInfo(label: UILabel, station: Station)  {
+        var resultString = station.stationTitle != nil ? "Название станции: \(station.stationTitle!)\n\n" : ""
+        resultString += station.getReadableLocation()
+        print(station.regionTitle)
+        label.text = resultString
+    }
     // MARK: - Navigation
 
      @IBAction func cancel() {
