@@ -29,7 +29,7 @@ class Station: Place {
                    regionTitle: regionTitle)
         
         self.stationId = stationId
-        self.stationTitle = stationTitle
+        self.stationTitle = stationTitle == nil || stationTitle!.isEmpty ? nil : stationTitle
     }
     
     func getDescription() -> String {
@@ -42,7 +42,7 @@ class Station: Place {
     
     func getReadableLocation() -> String {
         var result = self.countryTitle != nil ? "\(self.countryTitle!)" : ""
-        result += self.regionTitle != nil && self.regionTitle != "" ? ", \(self.regionTitle!)" : ""
+        result += self.regionTitle != nil ? ", \(self.regionTitle!)" : ""
         result += self.cityTitle != nil ? ", \(self.cityTitle!)" : ""
         return result
     }

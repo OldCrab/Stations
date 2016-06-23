@@ -23,11 +23,12 @@ class Place {
          cityTitle: String?,
          regionTitle: String?) {
         
-        self.countryTitle = countryTitle
+        
+        self.countryTitle = countryTitle == nil || countryTitle!.isEmpty ? nil : countryTitle
         self.point = point
-        self.districtTitle = districtTitle
+        self.districtTitle = districtTitle == nil || districtTitle!.isEmpty ? nil : districtTitle
         self.cityID = cityID
-        self.cityTitle = cityTitle
-        self.regionTitle = regionTitle
+        self.cityTitle = cityTitle == nil || cityTitle!.isEmpty ? nil : cityTitle
+        self.regionTitle = regionTitle == nil || regionTitle!.isEmpty ? nil : regionTitle
     }
 }

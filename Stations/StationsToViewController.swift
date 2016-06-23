@@ -26,7 +26,7 @@ class StationsToViewController: StationsViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
-        if searchController.active && searchController.searchBar.text != "" {
+        if isSearching {
             delegate.chooseStationTo(filteredStations[indexPath.row])
         } else {
             delegate.chooseStationTo(stations[indexPath.row])

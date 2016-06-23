@@ -59,10 +59,10 @@ class JSONParserTests: XCTestCase {
         
         XCTAssertEqual(result.countryTitle, "Австрия")
         XCTAssertNotNil(result.point)
-        XCTAssertEqual(result.regionTitle, "")
+        XCTAssertNil(result.regionTitle)
         XCTAssertEqual(result.cityTitle, "город Вена")
         XCTAssertEqual(result.cityID, 2352)
-        XCTAssertEqual(result.districtTitle, "")
+        XCTAssertNil(result.districtTitle)
         XCTAssertEqual(result.stationId, 10154)
         XCTAssertEqual(result.stationTitle, "International Busterminal, Edbergstarsse 200 A")
         // This is an example of a functional test case.
@@ -226,10 +226,10 @@ class JSONParserTests: XCTestCase {
         
         XCTAssertEqual(result.countryTitle, "Австрия")
         XCTAssertNotNil(result.point)
-        XCTAssertEqual(result.regionTitle, "")
+        XCTAssertNil(result.regionTitle)
         XCTAssertEqual(result.cityTitle, "Вена")
         XCTAssertEqual(result.cityID, 2352)
-        XCTAssertEqual(result.districtTitle, "")
+        XCTAssertNil(result.districtTitle)
         XCTAssertEqual(result.stations.count, 5)
         
         city = [

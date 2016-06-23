@@ -27,12 +27,6 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
             return searchController.active && searchController.searchBar.text != ""
         }
     }
-//    var currentStations: [Station] {
-//        get {
-//            return searchController.active && searchController.searchBar.text != "" ? filteredStations : stations
-//        }
-//    }
-    
     
     //sorted cities
     var cities = [City]() {
@@ -44,6 +38,11 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
             fillStations(cities)
         }
     }
+    
+    var visibleSectionsCount = 25
+    var atLeastForLoading = 50
+    var thresholdSection = 5
+    var addedAmount = 20
     var stations = [Station]()
     var filteredStations = [Station]()
 
@@ -78,6 +77,12 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
         if isSearching {
             return 1
         }
+        print(NSDate().timeIntervalSince1970)
+        print(visibleSectionsCount)
+        if cities.count > atLeastForLoading {
+            return visibleSectionsCount
+        }
+        
         return cities.count
     }
     
@@ -91,6 +96,11 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.name.text = filteredStations[indexPath.row].stationTitle
         } else {
             cell.name.text = cities[indexPath.section].stations[indexPath.row].stationTitle
+            
+            if visibleSectionsCount - thresholdSection < indexPath.section {
+                visibleSectionsCount += addedAmount
+                self.reloadTVInMain(tableView)
+            }
         }
         
         return cell
@@ -139,6 +149,12 @@ class StationsViewController: UIViewController, UITableViewDataSource, UITableVi
             } else {
                 return $0.countryTitle < $1.countryTitle
             }
+        }
+    }
+    
+    func reloadTVInMain(tableView: UITableView) {
+        NSOperationQueue.mainQueue().addOperationWithBlock{
+            tableView.reloadData()
         }
     }
     

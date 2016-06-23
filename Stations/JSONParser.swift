@@ -97,11 +97,12 @@ class JSONParser {
 //        }
         return Station(countryTitle: station["countryTitle"] as? String,
                        point: parsePoint(station["point"] as? NSDictionary),
-                    districtTitle: station["districtTitle"] as? String,
+                    districtTitle: (station["districtTitle"] as? String),
                     cityID: station["cityId"] as? Int,
                     cityTitle: station["cityTitle"] as? String,
                     regionTitle: station["regionTitle"] as? String,
                     stationId: station["stationId"] as? Int,
                     stationTitle: station["stationTitle"] as? String)
     }
+
 }
